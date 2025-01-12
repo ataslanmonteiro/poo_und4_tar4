@@ -41,8 +41,8 @@ class Conta {
 }
 let usuario = new Usuario();
 
-usuario.setRG(01)
-usuario.setCPF(123.456.789-78);
+usuario.setRG(987654321);
+usuario.setCPF(123456789);
 usuario.setNome("João da Silva");
 
 let conta = new Conta(1234, usuario, 1000.98);
