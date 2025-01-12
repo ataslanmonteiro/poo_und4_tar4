@@ -33,5 +33,5 @@ let novaPalavra = substituirVogais(palavraOriginal, caractere);
 
 console.log(`A palavra '${palavraOriginal}' tem ${numVogais} vogais.`);
 console.log(
-  `A palavra '${palavraOriginal}' com as vogais substituídas por '${caractere}' é '${novaPalavra}'.`
+  `A palavra '${palavraOriginal}' com as vogais substituídas por '${caractere}' , é: '${novaPalavra}'.`
 );
