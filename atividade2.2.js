@@ -7,7 +7,7 @@ function contarUns(string) {
   return (string.match(/1/g) || []).length;
 }
 
-readline.question("Digite uma string de 0s e 1s: ", (string) => {
+readline.question("Digite uma string de contenha '0' e '1': ", (string) => {
   console.log(`A string '${string}' tem ${contarUns(string)} caracteres '1'.`);
   readline.close();
 });
