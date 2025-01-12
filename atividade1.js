@@ -4,23 +4,23 @@ class Usuario {
     this.CPF = CPF || null;
     this.nome = nome || "";
   }
-  getRG() {
+  get RG() {
     return this.RG;
   }
-  getRG(RG) {
+  get RG(RG) {
     this.RG = RG;
   }
-  getCPF() {
-    return this.CPF;
+  get CPF() {
+    return this._CPF;
   }
-  getCPF(CPF) {
-    this.CPF = CPF;
+  get CPF(CPF) {
+    this._CPF = CPF;
   }
-  getNome() {
-    return this.nome;
+  get nome() {
+    return this._nome;
   }
-  getNome(nome) {
-    this.nome = nome;
+  get nome(nome) {
+    this._nome = nome;
   }
 }
 class Conta {
@@ -29,28 +29,28 @@ class Conta {
     this.usuario = usuario;
     this.saldo = saldo;
   }
-  getAgencia() {
-    return this.agencia;
+  get agencia() {
+    return this._agencia;
   }
-  getUsuario() {
-    return this.usuario;
+  get usuario() {
+    return this._usuario;
   }
-  getSaldo() {
-    return this.saldo;
+  get saldo() {
+    return this._saldo;
   }
 }
 let usuario = new Usuario();
 
-usuario.setRG(987654321);
-usuario.setCPF(123456789);
-usuario.setNome("João da Silva");
+usuario.RG = 987654321;
+usuario.CPF = 123456789;
+usuario.nome = "João da Silva";
 
 let conta = new Conta(1234, usuario, 1000.98);
 
 console.log("Dados da Conta: ");
-console.log("Agência: ", conta.getAgencia());
-console.log("Saldo: ", conta.getSaldo());
+console.log("Agência: ", conta.agencia);
+console.log("Saldo: ", conta.saldo);
 console.log("Dados do Usuário: ");
-console.log("RG: ", conta.getUsuario().getRG());
-console.log("CPF: ", conta.getUsuario().getCPF());
-console.log("RG: ", conta.getUsuario().getNome());
+console.log("RG: ", conta.usuario.RG);
+console.log("CPF: ", conta.usuario.CPF);
+console.log("RG: ", conta.usuario.nome);
