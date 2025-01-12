@@ -11,7 +11,7 @@ function inverterPalavra(palavra) {
 
 rl.question("Digite uma palavra: ", (palavraInvertida) => {
   console.log(
-    `A palavra '${palavraInvertida}' invertida é '${inverterPalavra(
+    `A palavra '${palavraInvertida}' invertida é: '${inverterPalavra(
       palavraInvertida
     )}'.`
   );
