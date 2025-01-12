@@ -1,33 +1,33 @@
 class Usuario {
   constructor(RG, CPF, nome) {
-    this.RG = RG || null;
-    this.CPF = CPF || null;
-    this.nome = nome || "";
+    this._RG = RG || null;
+    this._CPF = CPF || null;
+    this._nome = nome || "";
   }
   get RG() {
-    return this.RG;
+    return this._RG;
   }
-  get RG(RG) {
-    this.RG = RG;
+  set RG(RG) {
+    this._RG = RG;
   }
   get CPF() {
     return this._CPF;
   }
-  get CPF(CPF) {
+  set CPF(CPF) {
     this._CPF = CPF;
   }
   get nome() {
     return this._nome;
   }
-  get nome(nome) {
+  set nome(nome) {
     this._nome = nome;
   }
 }
 class Conta {
   constructor(agencia, usuario, saldo) {
-    this.agencia = agencia;
-    this.usuario = usuario;
-    this.saldo = saldo;
+    this._agencia = agencia;
+    this._usuario = usuario;
+    this._saldo = saldo;
   }
   get agencia() {
     return this._agencia;
@@ -53,4 +53,4 @@ console.log("Saldo: ", conta.saldo);
 console.log("Dados do Usuário: ");
 console.log("RG: ", conta.usuario.RG);
 console.log("CPF: ", conta.usuario.CPF);
-console.log("RG: ", conta.usuario.nome);
+console.log("Nome: ", conta.usuario.nome);
