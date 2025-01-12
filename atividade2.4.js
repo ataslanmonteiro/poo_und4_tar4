@@ -1,3 +1,5 @@
+const readlineSync = require("readline-sync");
+
 function contarVogais(palavra) {
   let vogais = "aeiouAEIOU";
   let count = 0;
@@ -22,8 +24,10 @@ function substituirVogais(palavra, caractere) {
   return novaPalavra;
 }
 
-let palavraOriginal = prompt("Digite uma palavra:");
-let caractere = prompt("Digite um caractere para substituir as vogais:");
+let palavraOriginal = readlineSync.question("Digite uma palavra: ");
+let caractere = readlineSync.question(
+  "Digite um caractere para substituir as vogais: "
+);
 let numVogais = contarVogais(palavraOriginal);
 let novaPalavra = substituirVogais(palavraOriginal, caractere);
 
